@@ -294,3 +294,5 @@ ADMIN_URL = r'^admin/'
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
 WAGTAIL_SITE_NAME = '{{cookiecutter.project_name}}'
+WAGTAIL_ALLOW_UNICODE_SLUGS = True
+
