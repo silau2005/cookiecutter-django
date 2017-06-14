@@ -284,7 +284,7 @@ else:
 {%- if cookiecutter.use_compressor == 'y'-%}
 # django-compressor
 # ------------------------------------------------------------------------------
-#INSTALLED_APPS += ['compressor']
+#INSTALLED_APPS += ['compressor'] #was included in puput
 STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 {%- endif %}
 
