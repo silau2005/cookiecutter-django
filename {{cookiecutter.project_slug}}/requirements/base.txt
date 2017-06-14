@@ -14,6 +14,9 @@ django-environ==0.4.3
 whitenoise==3.3.0
 {%- endif %}
 
+# Wagtail
+wagtail==1.10.1
+puput==0.8
 
 # Forms
 django-braces==1.11.0
