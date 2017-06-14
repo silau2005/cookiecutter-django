@@ -2,9 +2,9 @@ Cookiecutter Django
 =======================
 
 Added some customization into this fork:
-1. change AWS S3 store to Default store
-2. Nginx config update: MAX upload size up, and handlge unallowed headers
-3. integrate Wagtail and Puppt, updating requirement.txt and setting/base.py
+*change AWS S3 store to Default store
+*Nginx config update: MAX upload size up, and handlge unallowed headers
+*integrate Wagtail and Puppt, updating requirement.txt and setting/base.py
 
 
 
