@@ -1,6 +1,14 @@
 Cookiecutter Django
 =======================
 
+Added some customization into this fork:
+1. change AWS S3 store to Default store
+2. Nginx config update: MAX upload size up, and handlge unallowed headers
+3. integrate Wagtail and Puppt, updating requirement.txt and setting/base.py
+
+
+
+
 .. image:: https://pyup.io/repos/github/pydanny/cookiecutter-django/shield.svg
      :target: https://pyup.io/repos/github/pydanny/cookiecutter-django/
      :alt: Updates
