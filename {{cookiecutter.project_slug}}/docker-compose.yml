@@ -3,6 +3,7 @@ version: '2'
 volumes:
   postgres_data: {}
   postgres_backup: {}
+  django_media: {}  
 
 services:
   postgres:
@@ -16,6 +17,8 @@ services:
     build:
       context: .
       dockerfile: ./compose/django/Dockerfile
+    volumes:
+      - django_media:/app/{{cookiecutter.project_slug}}/media
     depends_on:
       - postgres
       - redis
