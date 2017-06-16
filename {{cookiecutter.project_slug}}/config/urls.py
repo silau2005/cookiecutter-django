@@ -17,6 +17,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     # Your stuff: custom urls includes go here
+    url('^sitemap\.xml$', sitemap),
     url(r'', include('puput.urls')),
 
 
