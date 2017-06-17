@@ -27,8 +27,6 @@ services:
 
   nginx:
     build: ./compose/nginx
-    volumes:
-      - django_media:/usr/share/nginx/html/media
     depends_on:
       - django
 {% if cookiecutter.use_lets_encrypt == 'y' %}
@@ -41,6 +39,7 @@ services:
 {% if cookiecutter.use_lets_encrypt == 'y' %}
       - "0.0.0.0:443:443"
     volumes:
+      - django_media:/usr/share/nginx/html/media
       - /etc/letsencrypt:/etc/letsencrypt
       - /var/lib/letsencrypt:/var/lib/letsencrypt
 
