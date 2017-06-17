@@ -27,6 +27,8 @@ services:
 
   nginx:
     build: ./compose/nginx
+    volumes:
+      - django_media:/usr/share/nginx/html/media
     depends_on:
       - django
 {% if cookiecutter.use_lets_encrypt == 'y' %}
