@@ -1,9 +1,14 @@
-FROM python:3.5
+FROM continuumio/anaconda3
 
 ENV PYTHONUNBUFFERED 1
 
+RUN apt-get update && apt-get install -y \
+ libpq-dev \
+ build-essential \
+&& rm -rf /var/lib/apt/lists/*
+
 RUN groupadd -r django \
-    && useradd -r -g django django
+    && useradd -m -r -g django django
 
 # Requirements have to be pulled and installed here, otherwise caching won't work
 COPY ./requirements /requirements
