@@ -62,8 +62,8 @@ LOCAL_APPS = [
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-from puput import PUPUT_APPS
-INSTALLED_APPS += PUPUT_APPS
+#from puput import PUPUT_APPS
+#INSTALLED_APPS += PUPUT_APPS
 
 # MIDDLEWARE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -75,8 +75,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'wagtail.wagtailcore.middleware.SiteMiddleware',
-    'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+    #'wagtail.wagtailcore.middleware.SiteMiddleware',
+    #'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 ]
 
 # MIGRATIONS CONFIGURATION
@@ -284,7 +284,7 @@ else:
 {%- if cookiecutter.use_compressor == 'y'-%}
 # django-compressor
 # ------------------------------------------------------------------------------
-#INSTALLED_APPS += ['compressor'] #was included in puput
+INSTALLED_APPS += ['compressor'] #may be included in puput
 STATICFILES_FINDERS += ['compressor.finders.CompressorFinder']
 {%- endif %}
 
@@ -293,4 +293,4 @@ ADMIN_URL = r'^admin/'
 
 # Your common stuff: Below this line define 3rd party library settings
 # ------------------------------------------------------------------------------
-WAGTAIL_SITE_NAME = '{{cookiecutter.project_name}}'
+#WAGTAIL_SITE_NAME = '{{cookiecutter.project_name}}'
